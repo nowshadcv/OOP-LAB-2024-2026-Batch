@@ -1,7 +1,3 @@
-
-
-
-
 package MODULE_1;
 
 public class Product {
