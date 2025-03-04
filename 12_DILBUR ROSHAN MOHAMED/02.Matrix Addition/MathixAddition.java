@@ -1,9 +1,9 @@
 package MODULE1;
 import java.util.Scanner;
 
-public class mathixaddition {
+public class MathixAddition {
 
-    public mathixaddition() {
+    public MathixAddition() {
     }
 
     public static void main(String[] args) {
