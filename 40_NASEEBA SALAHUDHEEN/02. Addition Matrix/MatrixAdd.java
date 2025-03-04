@@ -1,4 +1,4 @@
-package MODULE_1;
+package MODULE1;
 import java.util.Scanner;
 public class MatrixAdd {
 	public static void main(String[] args) {
