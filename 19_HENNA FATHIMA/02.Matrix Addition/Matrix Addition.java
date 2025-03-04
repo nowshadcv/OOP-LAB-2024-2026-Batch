@@ -2,7 +2,7 @@ package MODULE_2;
 
 import java.util.Scanner;
 
-public class MatrixAdd {
+public class MatrixAddition {
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		int p,q,m,n;
