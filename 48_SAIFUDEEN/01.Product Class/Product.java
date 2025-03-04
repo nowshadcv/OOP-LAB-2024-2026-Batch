@@ -1,5 +1,4 @@
 Product.java: 
-------------
 package Module1;
 
 public class Product {
