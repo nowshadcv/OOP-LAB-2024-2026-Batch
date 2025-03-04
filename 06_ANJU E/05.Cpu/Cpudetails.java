@@ -1,18 +1,22 @@
-package MODULE1;
+package module_1;
 
-public class Cpudetails {
-public static void main(String[] args) {
-   
-    CPU cpu = new CPU();
+import java.util.Scanner;
 
-  
-    CPU.processor processor = cpu.new processor();
-
-  
-    CPU.RAM ram = new CPU.RAM();
-
-  
-    System.out.println("Processor cache = " + processor.getCache());
-    System.out.println("RAM clock speed = " + ram.getClockspeed());
-}
+public class CPUdetails{
+	public static void main(String[] args) {
+		CPU cpu = new CPU();
+		Scanner s = new Scanner(System.in);
+		System.out.println("What's cache of your processor");
+		double cache = s.nextDouble();
+		System.out.println("Ram ClockSpeed?");
+		double clockSpeed = s.nextDouble();
+		CPU.Processor p = cpu.new Processor(cache);
+		CPU.Ram ram = new CPU.Ram(clockSpeed);
+		s.close();
+		System.out.println("Processor Cache  "+p.getCache()+" MB");
+		System.out.println("Ram Clock Speed  "+ram.getClockSpeed()+" GHz");
+//		System.out.println(p.getCache(cache));
+//		System.out.println(ram.getClockSpeed(clockSpeed));
+	}
+	
 }
