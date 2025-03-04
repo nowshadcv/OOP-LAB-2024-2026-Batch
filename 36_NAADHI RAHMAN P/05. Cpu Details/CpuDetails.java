@@ -1,6 +1,6 @@
 package MODULE1;
 import java.util.Scanner;
-public class CPUDetails {
+public class CpuDetails {
 
 	public static void main(String[] args) {
 		double p,m;
