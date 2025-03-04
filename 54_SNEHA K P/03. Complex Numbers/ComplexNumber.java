@@ -1,5 +1,5 @@
 package MODULE_1;
-
+import java.util.Scanner;
 public class ComplexNumber {
 	
 	double real,img;
@@ -15,11 +15,26 @@ public class ComplexNumber {
 	}
 
 	public static void main(String[] args) {
-		ComplexNumber c1=new ComplexNumber(5.5,4);
-		ComplexNumber c2= new ComplexNumber(1.2,3.5);
+		Scanner s=new Scanner(System.in);
+		
+		System.out.print("Enter the rear part of 1st complex number: ");
+		double r1=s.nextDouble();
+		
+		System.out.print("Enter the imaginary part of 1st complex number: ");
+		double i1=s.nextDouble();
+		
+		System.out.print("Enter the rear part of 2st complex number: ");
+		double r2=s.nextDouble();
+		
+		System.out.print("Enter the imaginary part of 2st complex number: ");
+		double i2=s.nextDouble();
+		
+		ComplexNumber c1=new ComplexNumber(r1,i1);
+		ComplexNumber c2= new ComplexNumber(r2,i2);
 		ComplexNumber temp = sum(c1,c2);
 		System.out.printf("Sum is : "+temp.real+"+"+temp.img+"i");
 
 	}
 
 }
+
