@@ -2,7 +2,7 @@ package MODULE1;
 
 import java.util.Scanner;
 
-public class matrixadd {
+public class MatrixAdd {
 	public static void main(String args[]) {
 		int p,q,m,n;
 		Scanner s=new Scanner(System.in);
