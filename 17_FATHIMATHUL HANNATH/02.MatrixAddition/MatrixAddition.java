@@ -1,7 +1,7 @@
 package MODULE_1;
 import java.util.Scanner;
 
-public class matrixAddition {
+public class MatrixAddition {
 
 
 	public static void main(String[] args) {
