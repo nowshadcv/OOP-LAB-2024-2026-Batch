@@ -1,6 +1,6 @@
 package MODULE1;
 import java.util.Scanner;
-public class Complex{
+public class ComplexNumber{
 	double real,img;
 	Complex(double r,double i){
 		real=r;img=i;
