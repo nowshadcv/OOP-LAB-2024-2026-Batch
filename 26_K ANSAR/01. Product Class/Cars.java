@@ -25,7 +25,7 @@ class Product {
     }
 }
 
-public class cars {
+public class Cars {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
