@@ -14,7 +14,7 @@ public class Cars {
         String pname1 = scanner.nextLine();
         System.out.print("Enter Product Price: ");
         int price1 = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
 
         Product p1 = new Product(pname1, pcode1, price1);
 
@@ -25,7 +25,7 @@ public class Cars {
         String pname2 = scanner.nextLine();
         System.out.print("Enter Product Price: ");
         int price2 = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
 
         Product p2 = new Product(pname2, pcode2, price2);
 
