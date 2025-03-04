@@ -1,5 +1,5 @@
 package module_1;
-public class CPU{
+public class Cpu{
 	double price;
 	class Processor{
 		double cores;
