@@ -2,7 +2,7 @@ package MODULE1;
 
 import java.util.Scanner;
 
-public class symmetricmatrix {
+public class Symmetricmatrix {
 
 	
 
