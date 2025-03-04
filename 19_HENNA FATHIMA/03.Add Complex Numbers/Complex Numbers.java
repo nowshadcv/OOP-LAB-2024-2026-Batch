@@ -2,7 +2,7 @@ package MODULE_2;
 
 import java.util.Scanner;
 
-public class ComplexNumber {
+public class ComplexNumbers {
 	double real,img;
 	ComplexNumber(double r,double i){
 		real=r; 
