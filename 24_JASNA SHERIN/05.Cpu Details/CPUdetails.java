@@ -19,6 +19,6 @@ public class CPU Details {
 		System.out.println("Processor Cache = " + processor.getCach());
 		System.out.println("RAM CLock speed = " + ram.getClockSpeed());
 		
-		sc.close();
+		
 	}
 }
