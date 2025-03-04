@@ -27,7 +27,7 @@ public class Symmetry {
 			System.out.println();
 		}
 		if(rows != cols)
-			System.out.println("Given Matrix is not source matrix");
+			System.out.println("Given Matrix is not square matrix");
 		else {
 			boolean sym = true;
 			for(int i = 0; i < rows; i++)
