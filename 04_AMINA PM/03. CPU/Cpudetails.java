@@ -1,12 +1,12 @@
 package MODULE1;
 
 import java.util.Scanner;
-public class cpudetails {
+public class CPUDetails {
     public static void main(String[] args) {
         
-       cpu cpu=new cpu();
-       cpu.Processor processor = cpu.new Processor();
-       cpu.RAM ram = new cpu.RAM();
+       CPU cpu=new CPU();
+       CPU.Processor processor = cpu.new Processor();
+       CPU.RAM ram = new CPU.RAM();
        
        Scanner scanner=new Scanner(System.in);
        System.out.print("Enter Processor Cache: ");
