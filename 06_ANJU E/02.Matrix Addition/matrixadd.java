@@ -1,6 +1,6 @@
 package MODULE1;
 import java.util.Scanner;
-public class matrixadd {
+public class Matrixadd {
 
 	//public matrixadd() {
 		
