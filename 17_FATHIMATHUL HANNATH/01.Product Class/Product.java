@@ -1,10 +1,10 @@
 package MODULE1;
 
-public class product {
+public class Product {
 	String pname,pcode;
 	int price;
-	public product() {}
-	public product(String pname,String pcode,int price) {
+	public Product() {}
+	public Product(String pname,String pcode,int price) {
 		this.pname =pname;
 		this.pcode =pcode;
 		this.price = price; }
