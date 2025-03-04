@@ -27,7 +27,7 @@ public class StringSort {
 			break;
 		case 2:
 			for(int i=0;i<count;i++)
-				for(int j=0;j<strlist.length;j++)
+				for(int j=i+1;j<strlist.length;j++)
 					if(strlist[i].compareTo(strlist[j])>0) {
 						temp=strlist[i];
 						strlist[i]=strlist[j];
