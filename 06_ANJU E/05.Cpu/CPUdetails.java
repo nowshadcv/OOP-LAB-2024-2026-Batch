@@ -1,6 +1,6 @@
 package MODULE1;
 
-public class CPUdetails {
+public class Cpudetails {
 public static void main(String[] args) {
    
     CPU cpu = new CPU();
