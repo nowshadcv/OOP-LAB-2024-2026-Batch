@@ -1,6 +1,6 @@
 package MODULE1;
 
-public class CPU {
+public class Cpu {
     double price;
 
     
