@@ -1,0 +1,37 @@
+package module_1;
+import java.util.Scanner;
+
+public class ComplexNumbers {
+	double real, img;
+	ComplexNumbers(double r, double i){
+		real=r; img=i;
+	}
+	public static ComplexNumbers sum(ComplexNumbers c1, ComplexNumbers c2) {
+		ComplexNumbers temp = new ComplexNumbers(0,0);
+		temp.real = c1.real+c2.real;
+		temp.img = c1.img+c2.img;
+		return temp;
+	}
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("enter real part first complex number: ");
+		double real1 = scanner.nextDouble();
+		System.out.println("enter imaginary part first complex number: ");
+		double img1 = scanner.nextDouble();
+		
+		System.out.println("enter real part second complex number: ");
+		double real2 = scanner.nextDouble();
+		System.out.println("enter real part second complex number: ");
+		double img2 = scanner.nextDouble();
+		
+		ComplexNumbers c1 = new ComplexNumbers(real1,img1);
+		ComplexNumbers c2 = new ComplexNumbers(real2,img2);
+		
+		ComplexNumbers temp = sum(c1,c2);
+		
+		System.out.println(("sum is "+temp.real+" + "+ temp.img + "i"));
+
+	}
+
+}
