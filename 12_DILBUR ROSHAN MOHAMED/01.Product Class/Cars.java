@@ -1,6 +1,6 @@
 package MODULE1;
 
-public class cars {
+public class Cars {
 	public static void main(String[] args) {
 		product p1 = new product();
 		p1.pcode = "car123";
