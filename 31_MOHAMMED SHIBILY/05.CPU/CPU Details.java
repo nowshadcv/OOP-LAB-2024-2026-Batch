@@ -1,5 +1,5 @@
 
-package MODULE_1;
+package MODULE5;
 import java.util.Scanner;
 public class CPUDetails {
 	public static void main(String[] args) {
