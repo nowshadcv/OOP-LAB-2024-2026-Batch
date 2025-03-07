@@ -1,8 +1,8 @@
 
-package MODULE_1;
+package MODULE6;
 import java.util.Arrays;
 import java.util.Scanner;
-public class StringSort {
+public class Stringsort {
 	public static void main(String[]args) {
 		int count=0;
 		String tmp;
