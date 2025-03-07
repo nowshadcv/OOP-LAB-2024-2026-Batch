@@ -1,4 +1,4 @@
-package MODULE_1;
+package MODULE5;
 
 public class CPU {
 	double price;
