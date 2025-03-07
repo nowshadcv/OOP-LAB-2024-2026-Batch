@@ -1,5 +1,5 @@
 
-package MODULE_1;
+package MODULE2;
 import java.util.Scanner;
 public class MatrixAdd {
 	public static void main(String[] args) {
