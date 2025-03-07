@@ -1,5 +1,5 @@
 
-package MODULE_1;
+package MODULE4;
 import java.util.Scanner;
 public class SymmetricMatrix {
 	public static void main(String[] args) {
