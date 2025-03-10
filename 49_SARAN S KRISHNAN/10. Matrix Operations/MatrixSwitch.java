@@ -71,12 +71,11 @@ public class MatrixSwitch {
 					System.out.println();}
 					break;
 			case 5:
+				System.out.println("Exited");
 				break;
 			}
 			}
 		}
-		else {
-			System.out.println("These matrices cannot be added...");}
 		}
 	}	
 }
