@@ -1,4 +1,4 @@
-package MODULE_2;
+package MODULE9;
 
 public class Employee {
 	int eNo,eSalary;
