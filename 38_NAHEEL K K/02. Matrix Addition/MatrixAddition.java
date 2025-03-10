@@ -81,10 +81,18 @@ public class MatrixAddition {
 					}
 					break;
 				case 5:
+					System.out.println("Transpose of Matrix A");
 					for(int i = 0; i < m; i++)
 					{
 						for(int j = 0; j < n; j++)
 							System.out.print(a[j][i] + "  ");						
+						System.out.println();
+					}
+					System.out.println("Transpose of Matrix B");
+					for(int i = 0; i < m; i++)
+					{
+						for(int j = 0; j < n; j++)
+							System.out.print(b[j][i] + "  ");						
 						System.out.println();
 					}
 					break;
