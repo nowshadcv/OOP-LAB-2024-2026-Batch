@@ -1,6 +1,6 @@
 package MODULE1;
 import java.util.Scanner;
-public class linear{
+public class Linear{
 	
 	public static void main(String[] args) {
 		int c,n,search,array[];
