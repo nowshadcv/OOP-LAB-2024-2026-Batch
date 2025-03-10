@@ -73,12 +73,12 @@ public class Matrix {
 			case 5:System.out.println(" transpose of matrix A:");
 			for(int i=0;i<q;i++) {
 				for(int j=0;j<p;j++)
-					System.out.print(a[i][j]+ " ");
+					System.out.print(a[j]ij]+ " ");
 			System.out.println();}
 			System.out.println(" transpose of matrix B:");
 			for(int i=0;i<n;i++) {
 				for(int j=0;j<m;j++)
-					System.out.print(b[i][j]+ " ");
+					System.out.print(b[j][i]+ " ");
 			System.out.println();}
 				
 		
