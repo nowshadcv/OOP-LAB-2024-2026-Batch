@@ -25,8 +25,9 @@ public class Employee {
 				System.out.println("enter"+1+"employee details..");
 				System.out.println("enter employee id(integer):");
 				eid=scemp.nextInt();
+				scemp.nextLine();
 				System.out.println("enter employee name (String):");
-				String nam=scemp.next();
+				String nam=scemp.nextLine();
 				enam=new String (nam);
 				System.out.println("enter employee salary(integer):");
 				esal=scemp.nextInt();
