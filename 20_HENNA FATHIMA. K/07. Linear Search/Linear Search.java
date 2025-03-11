@@ -1,4 +1,4 @@
-package MODULE1;
+package MODULE2;
 import java.util.Scanner;
 public class LinearSearch {
 
