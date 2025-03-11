@@ -16,8 +16,9 @@ public class EmpArrObjects {
 			System.out.println("Enter "+i+"Employee details");
 			System.out.println("Enter employee id (integer) : ");
 			eid=scemp.nextInt();
+			scemp.nextLine();
 			System.out.println("Enter Employee Name (String ) : ");
-			String nam=scemp.next();
+			String nam=scemp.nextLine();
 			enam=new String(nam);
 			System.out.println("Enter employee salary (integer) : ");
 			esal= scemp.nextInt();
@@ -25,7 +26,7 @@ public class EmpArrObjects {
 			employees[i]=emp;}
 		System.out.println("Employees are : \n");
 		for(Employee y : employees)
-			y.showdata();
+			y.showData();
 		System.out.println("Enter empoyee number to search :");
 		int semp=sc.nextInt();
 		boolean found = false;
@@ -33,10 +34,21 @@ public class EmpArrObjects {
 			if(semp==e.eNo) {
 				found=true;
 				System.out.println("Employee found");
-				e.showdata();
+				e.showData();
 				break;}}
 		if(! found)
 			System.out.println("Employee not found");}
 			}
 			
-		
+class Employee{
+	int eNo,eSalary;
+	String eName;
+	public Employee( ) {}
+	public Employee(int no,int sal,String name) {
+		eNo=no;
+		eSalary=sal;
+		eName=name;}
+	public void showData( ) {
+		System.out.print("EmpId = " + eNo +" "+"Name = " + eName+" " + "Salary = " + eSalary );
+		System.out.println();}
+	}	
