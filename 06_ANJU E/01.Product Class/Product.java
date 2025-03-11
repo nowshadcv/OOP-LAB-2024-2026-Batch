@@ -1,46 +1,35 @@
 package MODULE1;
 
-public class PRODUCT {
+public class Product {
 	String pname,pcode;
 	int price;
-	public PRODUCT() {}
-	public PRODUCT(String pname,String pcode,int price)
-	{
-		this.pname=pname;
-		this.pcode=pcode;
-		this.price=price;
-		}
-	public void setpname(String pname)
-	{
-		this.pname=pname;
+	public Product() {}
+	public Product(String pname,String pcode ,int price) {
+		this.pname =pname;
+		this.pcode = pcode;
+		this.price = price ;
 	}
-	public String getpcode()
-	{
+	public void setPname(String pname) {
+		this.pname = pname;
+	}
+	public String getPcode() {
 		return pcode;
 	}
-	public String getpname()
-	{
+	public String getPname() {
 		return pname;
 	}
-	public void setpcode(String pcode)
-	{
+	public void setPcode(String pcode) {
 		this.pcode=pcode;
 	}
-    public int getprice()
-	{
+	public int getPrice() {
 		return price;
 	}
-	public void  setprice(int price)
-	{
-		this.price=price;		
+	public void setPrice(int price) {
+		this.price = price;
 	}
-	public void display()
-	{
+	public void display() {
 		System.out.println("pcode:"+this.pcode);
 		System.out.println("pname:"+this.pname);
-		System.out.println("price:"+this.price+"\n");
-		
+		System.out.println("price"+this.price);
 	}
-
 }
-   
