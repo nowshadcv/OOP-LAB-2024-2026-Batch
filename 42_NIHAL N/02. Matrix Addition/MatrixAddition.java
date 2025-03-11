@@ -1,6 +1,5 @@
 package MODULE1;
 
-
 import java.util.Scanner;
 
 public class MatrixAddition {
@@ -41,71 +40,17 @@ public class MatrixAddition {
 					System.out.print(b[i][j] + "  ");
 				System.out.println();
 			}
-			int choice = 0;
-			while(choice != 6) {
-				System.out.println("Choose one from the MENU below:");
-				System.out.println("-------------------Menu------------------\n1. Addition\n2. Subtraction\n3. Division\n4. Multiplication\n5. Transpose\n6. Exit");
-				
-				choice = s.nextInt();
-			switch(choice) {
-				case 1:
-					for(int i = 0; i < m; i++)
-					{
-						for(int j = 0; j < n; j++)
-							System.out.print((a[i][j] + b[i][j]) + "  ");
-						System.out.println();
-					}
-					break;
-				case 2:
-					for(int i = 0; i < m; i++)
-					{
-						for(int j = 0; j < n; j++)
-							System.out.print((a[i][j] - b[i][j]) + "  ");
-						System.out.println();
-					}
-					break;
-				case 3:
-					for(int i = 0; i < m; i++)
-					{
-						for(int j = 0; j < n; j++)
-							System.out.print((a[i][j] / b[i][j]) + "   ");
-						System.out.println();
-						System.out.println();
-					}
-					break;
-				case 4:
-					for(int i = 0; i < m; i++)
-					{
-						for(int j = 0; j < n; j++)
-							System.out.print((a[i][j] * b[i][j]) + "  ");
-						System.out.println();
-					}
-					break;
-				case 5:
-					System.out.println("Transpose of Matrix A");
-					for(int i = 0; i < m; i++)
-					{
-						for(int j = 0; j < n; j++)
-							System.out.print(a[j][i] + "  ");						
-						System.out.println();
-					}
-					System.out.println("Transpose of Matrix B");
-					for(int i = 0; i < m; i++)
-					{
-						for(int j = 0; j < n; j++)
-							System.out.print(b[j][i] + "  ");						
-						System.out.println();
-					}
-					break;
-				case 6:
-					System.exit(1);
-					
-			}
 			
-		}
+			System.out.println("Sum Matrix");
+			for(int i = 0; i < m; i++)
+			{
+				for(int j = 0; j < n; j++)
+					System.out.print((a[i][j] + b[i][j]) + "  ");
+				System.out.println();
+			}
 		}
 		else {
-			System.out.println("Matrices should be square.");
+			System.out.println("These Matrices cannot be added");
 		}
 	}
 }
