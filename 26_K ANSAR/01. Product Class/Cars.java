@@ -1,4 +1,4 @@
-package module_1;
+package MODULE1;
 
 import java.util.Scanner;
 
