@@ -1,4 +1,4 @@
-package MODULE1;
+package MODULE2;
 
 public class StringManipulation 
 {
