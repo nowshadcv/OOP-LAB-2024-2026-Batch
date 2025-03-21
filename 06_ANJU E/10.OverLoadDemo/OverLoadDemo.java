@@ -42,7 +42,7 @@ public class OverLoadDemo {
         double circleRadius = scanner.nextDouble();
         ob.area(circleRadius);
 
-        scanner.close(); // Close the scanner to prevent resource leak
+        scanner.close();
     }}
 
 	
