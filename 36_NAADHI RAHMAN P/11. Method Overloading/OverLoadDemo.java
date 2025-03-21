@@ -18,13 +18,13 @@ public static class OverLoad{
 	{
 		Scanner sc=new Scanner(System.in);
 		System.out.print("Enter a side of square: ");
-		float a=sc.nextInt();
+		float a=sc.nextFloat();
 		System.out.print("Enter length of rectangle: ");
-		float l=sc.nextInt();
+		float l=sc.nextFloat();
 		System.out.print("Enter breadth of rectangle: ");
-		float b=sc.nextInt();
-		System.out.print("Enter radius of square(double): ");
-		double r=sc.nextInt();
+		float b=sc.nextFloat();
+		System.out.print("Enter radius of circle(double): ");
+		double r=sc.nextDouble();
 		sc.close();
 		OverLoadDemo ob=new OverLoadDemo();
 		ob.area(a);
