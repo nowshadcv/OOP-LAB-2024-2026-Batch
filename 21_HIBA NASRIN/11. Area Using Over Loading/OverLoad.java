@@ -1,0 +1,21 @@
+package MODULE_2;
+
+import java.util.Scanner;
+public class OverLoad {
+	public static void main(String args[]) {
+		OverLoadDemo ob = new OverLoadDemo();
+		Scanner c = new Scanner(System.in);
+		System.out.println("Enter side length of the square : ");
+		float s = c.nextFloat();
+		ob.area(s);
+		System.out.println("Enter side length of rectangle : ");
+		float l = c.nextFloat();
+		System.out.println("Enter side breadth of the rectangle : ");
+		float b = c.nextFloat();
+		ob.area(l,b);
+		System.out.println("Enter side radius of the circle : ");
+		double r = c.nextDouble();
+		ob.area(r);
+		c.close();
+	}
+}
