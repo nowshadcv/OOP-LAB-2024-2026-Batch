@@ -1,4 +1,4 @@
-package module_2;
+package MODULE2;
 
 public class OverloadDemo {
 	void area(long x) {
