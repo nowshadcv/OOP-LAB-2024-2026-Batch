@@ -1,41 +1,47 @@
 package MODULE_1;
 
 public class StringManipulation {
-private static String dVal;
-public static void main(String[] args) {
-		char arrSample[] = { 'R','O','S','E'};
-		String strSample1 = new String (arrSample);
-		System.out.print(strSample1 + "\t");
-		System.out.println( "Length of" + strSample1 + "is:" + strSample1.length());
-		byte ascii[] = { 65,66,67,68,69,70};
-		String strSample2 = new String (ascii);
-		System.out.print(strSample2 + "\t");
-		String strSample3 = strSample1.concat(strSample2);
-		System.out.print(strSample3 + "\t");
-		String strSample4 = strSample1 + strSample2;
-		System.out.print( strSample4 + "\t");
-		System.out.println( "3rd char of "+ strSample4 + "is :" + strSample4.charAt(2));
-		char buf[] = new char [3];
-		strSample4.getChars(2, 5, buf, 0);
-		System.out.println(" Extracted chars: " + strSample4 + "" + new String (buf));
-		String strSample = "RockStar";
-		System.out.print(strSample.compareTo("ROCKSTAR")+ "\t");
-		System.out.print(strSample.compareToIgnoreCase("ROCKSTAR") + "\t");
-		System.out.print(strSample.equals("ROCKSTAR")+ "\t");
-		System.out.print(strSample.equalsIgnoreCase("ROCKSTAR")+ "\t");
-		System.out.println("RockStar starts with 'Ro':" + strSample.startsWith("Ro"));
-		System.out.println("Rockstars ends with 'Star':"+ strSample.endsWith("Star"));
-		System.out.println("Rockstars Contain with 'tar':"+ strSample.contains("tar"));
-		System.out.println(" Index of 't' in Rockstars :"+ strSample.indexOf("t"));
-		System.out.println("Index of 'star' in Rockstars :"+ strSample.indexOf("Star"));
-		System.out.println("All caps RockStar:"+ strSample.toUpperCase());
-		System.out.println("All small Rockstars :"+ strSample.toLowerCase());
-		System.out.println("Replace star with et:"+ strSample.replace("Star","et"));
-		String iVal = "6";
-		System.out.println("Double value of dVal is" + Double.valueOf(dVal));
-		System.out.println("Integer value of iVal is" + Integer.valueOf(iVal));
-		double a = Double.valueOf(dVal);
-		int b = Integer.valueOf(iVal);
+
+	public StringManipulation() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		char arrsample[] = {'R','O','S','E'};
+		String strsample1 = new String(arrsample);
+		System.out.println(strsample1);
+		System.out.println("length of" + strsample1+ "is : " + strsample1.length());
+		byte ascii[] = {65,66,67,68,69,70};
+		String strsample2= new String(ascii);
+		System.out.println(strsample2);
+		String strsample3= strsample1.concat(strsample2);
+		System.out.println(strsample3);
+		String strsample4= strsample1 + strsample2;
+		System.out.println(strsample4);
+		System.out.println("3rd char of "+ strsample4 + "is : " + strsample4.charAt(2));
+		char buf[]= new char[3];
+		strsample4.getChars(2,5,buf,0);
+		System.out.println("Extracted chars: "+ strsample4+" "+new String(buf));
+		String strsample = "Rockstar";
+		System.out.println(strsample.compareTo("ROCKSTAR"));
+		System.out.println(strsample.compareToIgnoreCase("ROCKSTAR"+"\t"));
+		System.out.println(strsample.equals("ROCKSTAR"));
+		System.out.println(strsample.equalsIgnoreCase("ROCKSTAR"));
+		System.out.println("Rockstar starts with 'Ro': "+ strsample.startsWith("Ro"));
+		System.out.println("Rockstar starts with 'Star': "+ strsample.endsWith("star"));
+		System.out.println("Rockstar starts with 'tar': "+ strsample.contains("tar"));
+		System.out.println("Index of 't' in Rockstar: "+ strsample.indexOf("t"));
+		System.out.println("Index of 'star' in Rockstar: "+ strsample.indexOf("star"));
+		System.out.println("All caps of Rockstar "+ strsample.toUpperCase());
+		System.out.println("All small of Rockstar "+ strsample.toLowerCase());
+		System.out.println("Replace star with et: "+ strsample.replace("star", "et"));
+		
+		String dval = "3.456";
+		String ival = "6";
+		System.out.println("Double value of dval is : "+ Double.valueOf(dval));
+		System.out.println("Double value of ival is : "+ Integer.valueOf(ival));
+		double a = Double.valueOf(dval);
+		int b = Integer.valueOf(ival);
 		System.out.println(a+b);
 		
 	}
