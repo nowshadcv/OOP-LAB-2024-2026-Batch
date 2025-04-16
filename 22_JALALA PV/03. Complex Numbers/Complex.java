@@ -1,8 +1,8 @@
 package MODULE1;
 import java.util.Scanner;
-public class Complex{
+public class ComplexNumber{
 	double real,img;
-	Complex(double r,double i){
+	ComplexNumber(double r,double i){
 		real=r;img=i;
 	}
 	public static ComplexNumber sum(ComplexNumber c1,ComplexNumber c2)
