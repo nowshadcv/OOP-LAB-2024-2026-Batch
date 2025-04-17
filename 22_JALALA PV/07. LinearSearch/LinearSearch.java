@@ -8,7 +8,7 @@ public class LinearSearch {
 	System.out.println("enter no of elements");
 	n=in.nextInt();
 	array=new int[n];
-	System.out.println("enter those"+n+"elements");
+	System.out.println("enter those "+n+" elements");
 	for(c=0;c<n;c++)
 		array[c]=in.nextInt();
 	System.out.println("enter the value you want to find:");
@@ -16,11 +16,11 @@ public class LinearSearch {
 	for(c=0;c<n;c++)
 		if(array[c]==search)
 		{
-			System.out.println(search+"is present in the location"+(c+1));
+			System.out.println(search+" is present in the location "+(c+1));
 			break;
 		}
 	if(c==n)
-		System.out.println(search+"is not present in the array");
+		System.out.println(search+" is not present in the array");
 	
 	
 	}
