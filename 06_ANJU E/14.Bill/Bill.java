@@ -1,4 +1,4 @@
-package MODULE1;
+package MODULE3;
 import java.util.*;
 
 interface BillGen {
