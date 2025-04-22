@@ -1,82 +1,88 @@
-package MODULE3;
+package MODULE_3;
 import java.util.*;
+
+interface BillGen {
+    int calculate();
+}
+
+class ProductB implements BillGen {
+    String name;
+    int prod_id, quantity, unit_price, total;
+
+    ProductB() {}
+
+    ProductB(String n, int p, int q, int u) {
+        name = n;
+        prod_id = p;
+        quantity = q;
+        unit_price = u;
+    }
+
+    public int calculate() {
+        total = quantity * unit_price;
+        return total;
+    }
+}
 
 public class Bill {
     public static void main(String[] args) {
-        ProductB[][] order;
-        Scanner sc = new Scanner(System.in);
-        Set<Integer> usedProductIds = new HashSet<>(); // Ensure unique product IDs
-
-        System.out.print("Enter number of orders: ");
-        int n = sc.nextInt();
-        sc.nextLine(); // consume newline
-        order = new ProductB[n][];
-
-        for (int i = 0; i < n; i++) {
-            System.out.print("Enter number of products in order " + (i + 1) + ": ");
-            int m = sc.nextInt();
-            sc.nextLine(); // consume newline
-            order[i] = new ProductB[m];
-
-            for (int j = 0; j < m; j++) {
-                String name;
-                while (true) {
-                    System.out.print("Enter product " + (j + 1) + " Name: ");
-                    name = sc.nextLine().trim();
-                    if (name.isEmpty() || name.matches("\\d+")) {
-                        System.out.println("Invalid name. Please enter a valid string (not just numbers).");
-                    } else {
-                        break;
+        System.out.println("Enter no. of orders");
+        try (Scanner sc = new Scanner(System.in)) {
+            int n = sc.nextInt();
+            ProductB[][] order = new ProductB[n][];
+            HashSet<Integer> productIds = new HashSet<>();
+            for (int i = 0; i < n; i++) {
+                System.out.println("Enter no. of products:");
+                int m = sc.nextInt();
+                order[i] = new ProductB[m];
+                
+                for (int j = 0; j < m; j++) {
+                    System.out.println("Enter Product " + (j + 1) + " Name:");
+                    String a = sc.next();
+                    System.out.println("Enter Product Id:");
+                    int b = sc.nextInt();
+                    
+                    if (productIds.contains(b)) {
+                        System.out.println("Error: Product ID " + b + " already exists. Please enter a unique ID.");
+                        j--;
+                        continue;
                     }
+                    
+                    productIds.add(b);
+                    
+                    System.out.println("Enter Product quantity:");
+                    int c = sc.nextInt();
+                    System.out.println("Enter Product unit price:");
+                    int d = sc.nextInt();
+
+                    ProductB pb = new ProductB(a, b, c, d);
+                    order[i][j] = pb;
+                    order[i][j].total = order[i][j].calculate();
                 }
-
-                int id;
-                while (true) {
-                    System.out.print("Enter product ID: ");
-                    id = sc.nextInt();
-                    sc.nextLine(); // consume newline
-                    if (usedProductIds.contains(id)) {
-                        System.out.println("This product ID is already used. Please enter a unique product ID.");
-                    } else {
-                        usedProductIds.add(id);
-                        break;
-                    }
-                }
-
-                System.out.print("Enter product quantity: ");
-                int quantity = sc.nextInt();
-
-                System.out.print("Enter product Unit Price: ");
-                int unitPrice = sc.nextInt();
-                sc.nextLine(); // consume newline
-
-                ProductB pb = new ProductB(name, id, quantity, unitPrice);
-                pb.total = pb.calculate();
-                order[i][j] = pb;
-            }
-        }
-
-        // Print all orders
-        for (int i = 0; i < n; i++) {
-            int sum = 0;
-            System.out.println("\nOrder No: " + (i + 1));
-            Date date = java.util.Calendar.getInstance().getTime();
-            System.out.println(date);
-            System.out.println("---------------------------------------------------------------");
-            System.out.printf("%8s %20s %10s %12s %10s%n", "Prod_ID", "Name", "Quantity", "Unit Price", "Total");
-            System.out.println("---------------------------------------------------------------");
-
-            for (ProductB pb : order[i]) {
-                System.out.printf("%8d %20s %10d %12d %10d%n",
-                        pb.prod_id, pb.name, pb.quantity, pb.unit_price, pb.total);
-                sum += pb.total;
             }
 
-            System.out.println("---------------------------------------------------------------");
-            System.out.println("Net Amount: " + sum);
-            System.out.println("---------------------------------------------------------------");
-        }
+            for (int i = 0; i < n; i++) {
+                int sum = 0;
+                System.out.println("Order No:" + (i + 1));
+                Date date = java.util.Calendar.getInstance().getTime();
+                System.out.println(date);
+                System.out.println("________________________________________________________________________________");
+                System.out.printf("%5s %20s %25s %10s %10s", "Prod_id", "Name", "Quantity", "Unit_price", "Total");
+                System.out.println();
+                System.out.println("________________________________________________________________________________");
 
-        sc.close();
+                for (int j = 0; j < order[i].length; j++) {
+                    System.out.printf("%5d %20s %25d %10d %10d", order[i][j].prod_id, order[i][j].name, order[i][j].quantity, order[i][j].unit_price, order[i][j].total);
+                    System.out.println();
+                }
+
+                System.out.println("________________________________________________________________________________");
+                for (int k = 0; k < order[i].length; k++)
+                    sum = sum + order[i][k].total;
+                
+                System.out.println("Net Amount: " + sum);
+                System.out.println("________________________________________________________________________________");
+            }
+        }
     }
 }
