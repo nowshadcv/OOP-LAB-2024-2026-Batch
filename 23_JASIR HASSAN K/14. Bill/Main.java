@@ -23,8 +23,8 @@ class Product implements BillGen {
     }
 }
 
-public class Bill {
-    public static void main(String[] naheel) {
+public class Main {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter no. of orders: ");
         int n = sc.nextInt();
