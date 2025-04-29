@@ -75,12 +75,12 @@ public class IFaceDemo {
 			case 3:
 				System.out.println("enter the radius of circle: ");
 				c.input();
-				c.area();
+				c.peri();
 				break;
 			case 4:
 				System.out.println("enter length and breadth of rectangle: ");
 				r.input();
-				r.area();
+				r.peri();
 				break;
 			case 5:
 				break lp;
