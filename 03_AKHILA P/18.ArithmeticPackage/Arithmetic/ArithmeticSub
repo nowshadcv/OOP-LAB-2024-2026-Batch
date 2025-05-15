@@ -1,0 +1,6 @@
+package Arithmetic;
+
+public interface ArithmeticSub {
+	int substration();
+
+}
