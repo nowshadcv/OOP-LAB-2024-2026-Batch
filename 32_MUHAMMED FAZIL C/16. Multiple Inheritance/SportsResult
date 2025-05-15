@@ -19,7 +19,7 @@ class Result implements Student ,Sports{
 	}
 	
 }
-public class SportResult {
+public class SportsResult {
 
 	public static void main(String[] args) {
 		Result r = new Result();
