@@ -36,7 +36,7 @@ public class Main {
             System.out.print("Enter no. of products in order " + (i + 1) + ": ");
             int m = sc.nextInt();
             sc.nextLine();
-
+            
             order[i] = new Product[m];
 
             for (int j = 0; j < m; j++) {
