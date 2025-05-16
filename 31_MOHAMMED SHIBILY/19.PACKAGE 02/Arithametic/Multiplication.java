@@ -1,4 +1,0 @@
-package Arithmetic;
-public interface Multiplication {
-    double multiply(double a, double b);
-}
