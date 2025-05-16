@@ -1,6 +1,6 @@
 package figures;
 
-public class Square implements FiguresCi {
+public class Square implements FiguresSq {
     private double side;
 
     public Square(double s) {
