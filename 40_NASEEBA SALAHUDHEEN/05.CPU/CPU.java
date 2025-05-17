@@ -12,7 +12,7 @@ public class CPU{
 		double getCache() {
 			return Cache;
 		}
-//		double getCache(double a) {return a}
+
 	}
 	static class Ram{
 		double memory,clockSpeed;
@@ -24,7 +24,7 @@ public class CPU{
 		double getClockSpeed() {
 			return clockSpeed;
 		}
-//		double getClockSpeed(double b) {return b}
+
 	}
 
 }
