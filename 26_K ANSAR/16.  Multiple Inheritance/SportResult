@@ -1,31 +1,55 @@
-package mod4;
+package module_3;
 
-interface Student{
-	int score=10;
-	void displayScore();
+import java.util.Scanner;
+
+interface Student {
+    void setAcademicScore(int score);
+    void displayScore();
 }
 
-interface Sports{
-	int score=25;
-	void displaySports();
+interface Sports {
+    void setSportsScore(int score);
+    void displaySports();
 }
 
-class Result implements Student ,Sports{
-	public void displayScore() {
-		System.out.println("Academic score : "+Student.score);
-	}
-	public void displaySports() {
-		System.out.println("sports score : "+Sports.score);
-	}
-	
+class Result implements Student, Sports {
+    private int academicScore;
+    private int sportsScore;
+
+    public void setAcademicScore(int score) {
+        this.academicScore = score;
+    }
+
+    public void setSportsScore(int score) {
+        this.sportsScore = score;
+    }
+
+    public void displayScore() {
+        System.out.println("Academic score: " + academicScore);
+    }
+
+    public void displaySports() {
+        System.out.println("Sports score: " + sportsScore);
+    }
 }
+
 public class SportResult {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Result r = new Result();
 
-	public static void main(String[] args) {
-		Result r = new Result();
-		r.displayScore();
-		r.displaySports();
+        System.out.print("Enter academic score: ");
+        int academic = scanner.nextInt();
+        r.setAcademicScore(academic);
 
-	}
+        System.out.print("Enter sports score: ");
+        int sports = scanner.nextInt();
+        r.setSportsScore(sports);
 
+        System.out.println("\n--- Results ---");
+        r.displayScore();
+        r.displaySports();
+
+        scanner.close();
+    }
 }
