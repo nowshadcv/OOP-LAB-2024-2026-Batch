@@ -39,7 +39,7 @@ public class StringManipulation {
 		String dval = "3.456";
 		String ival = "6";
 		System.out.println("Double value of dval is : "+ Double.valueOf(dval));
-		System.out.println("Double value of ival is : "+ Integer.valueOf(ival));
+		System.out.println("Integer value of ival is : "+ Integer.valueOf(ival));
 		double a = Double.valueOf(dval);
 		int b = Integer.valueOf(ival);
 		System.out.println(a+b);
