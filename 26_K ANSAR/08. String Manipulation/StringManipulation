@@ -28,8 +28,8 @@ public class StringManipulation {
 		System.out.println(strsample.equals("ROCKSTAR"));
 		System.out.println(strsample.equalsIgnoreCase("ROCKSTAR"));
 		System.out.println("Rockstar starts with 'Ro': "+ strsample.startsWith("Ro"));
-		System.out.println("Rockstar starts with 'Star': "+ strsample.endsWith("star"));
-		System.out.println("Rockstar starts with 'tar': "+ strsample.contains("tar"));
+		System.out.println("Rockstar ends with 'Star': "+ strsample.endsWith("star"));
+		System.out.println("Rockstar containing 'tar': "+ strsample.contains("tar"));
 		System.out.println("Index of 't' in Rockstar: "+ strsample.indexOf("t"));
 		System.out.println("Index of 'star' in Rockstar: "+ strsample.indexOf("star"));
 		System.out.println("All caps of Rockstar "+ strsample.toUpperCase());
