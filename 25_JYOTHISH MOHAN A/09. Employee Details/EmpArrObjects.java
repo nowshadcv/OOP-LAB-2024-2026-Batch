@@ -43,10 +43,12 @@ public class EmpArrObjects {
             employees[i] = new Employee(id, salary, name);
         }
 
+    
         System.out.println("\nAll Employees:");
-        for (Employee e : employees) {
-            e.showData();
+        for (int i = 0; i < employees.length; i++) {
+            employees[i].showData();
         }
+
 
         System.out.print("\nEnter employee ID to search: ");
         int searchId = sc.nextInt();
