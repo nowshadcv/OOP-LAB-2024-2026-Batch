@@ -1,49 +1,78 @@
 package module_1;
 
+import java.util.Scanner;
+
 public class StringManipulation {
 
-	public StringManipulation() {
-		// TODO Auto-generated constructor stub
-	}
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-	public static void main(String[] args) {
-		char arrsample[] = {'R','O','S','E'};
-		String strsample1 = new String(arrsample);
-		System.out.println(strsample1);
-		System.out.println("length of" + strsample1+ "is : " + strsample1.length());
-		byte ascii[] = {65,66,67,68,69,70};
-		String strsample2= new String(ascii);
-		System.out.println(strsample2);
-		String strsample3= strsample1.concat(strsample2);
-		System.out.println(strsample3);
-		String strsample4= strsample1 + strsample2;
-		System.out.println(strsample4);
-		System.out.println("3rd char of "+ strsample4 + "is : " + strsample4.charAt(2));
-		char buf[]= new char[3];
-		strsample4.getChars(2,5,buf,0);
-		System.out.println("Extracted chars: "+ strsample4+" "+new String(buf));
-		String strsample = "Rockstar";
-		System.out.println(strsample.compareTo("ROCKSTAR"));
-		System.out.println(strsample.compareToIgnoreCase("ROCKSTAR"+"\t"));
-		System.out.println(strsample.equals("ROCKSTAR"));
-		System.out.println(strsample.equalsIgnoreCase("ROCKSTAR"));
-		System.out.println("Rockstar starts with 'Ro': "+ strsample.startsWith("Ro"));
-		System.out.println("Rockstar ends with 'Star': "+ strsample.endsWith("star"));
-		System.out.println("Rockstar containing 'tar': "+ strsample.contains("tar"));
-		System.out.println("Index of 't' in Rockstar: "+ strsample.indexOf("t"));
-		System.out.println("Index of 'star' in Rockstar: "+ strsample.indexOf("star"));
-		System.out.println("All caps of Rockstar "+ strsample.toUpperCase());
-		System.out.println("All small of Rockstar "+ strsample.toLowerCase());
-		System.out.println("Replace star with et: "+ strsample.replace("star", "et"));
-		
-		String dval = "3.456";
-		String ival = "6";
-		System.out.println("Double value of dval is : "+ Double.valueOf(dval));
-		System.out.println("Integer value of ival is : "+ Integer.valueOf(ival));
-		double a = Double.valueOf(dval);
-		int b = Integer.valueOf(ival);
-		System.out.println(a+b);
-		
-	}
+    
+        System.out.print("Enter characters (without space, e.g., ROSE): ");
+        String inputChars = scanner.nextLine();
+        char[] arrsample = inputChars.toCharArray();
+        String strsample1 = new String(arrsample);
+        System.out.println("String from char array: " + strsample1);
+        System.out.println("Length of " + strsample1 + " is: " + strsample1.length());
 
+       
+        System.out.print("Enter ASCII values separated by spaces (e.g., 65 66 67): ");
+        String[] asciiInput = scanner.nextLine().split(" ");
+        byte[] ascii = new byte[asciiInput.length];
+        for (int i = 0; i < asciiInput.length; i++) {
+            ascii[i] = Byte.parseByte(asciiInput[i]);
+        }
+        String strsample2 = new String(ascii);
+        System.out.println("String from ASCII values: " + strsample2);
+
+        
+        String strsample3 = strsample1.concat(strsample2);
+        System.out.println("Concatenated using concat(): " + strsample3);
+        String strsample4 = strsample1 + strsample2;
+        System.out.println("Concatenated using '+': " + strsample4);
+
+      
+        if (strsample4.length() >= 5) {
+            System.out.println("3rd character of " + strsample4 + " is: " + strsample4.charAt(2));
+            char[] buf = new char[3];
+            strsample4.getChars(2, 5, buf, 0);
+            System.out.println("Extracted chars from index 2 to 4: " + new String(buf));
+        }
+
+    
+        System.out.print("Enter a string to compare with 'Rockstar': ");
+        String strsample = scanner.nextLine();
+        System.out.println("Compare to 'ROCKSTAR': " + strsample.compareTo("ROCKSTAR"));
+        System.out.println("CompareIgnoreCase to 'ROCKSTAR\\t': " + strsample.compareToIgnoreCase("ROCKSTAR\t"));
+        System.out.println("Equals 'ROCKSTAR': " + strsample.equals("ROCKSTAR"));
+        System.out.println("EqualsIgnoreCase 'ROCKSTAR': " + strsample.equalsIgnoreCase("ROCKSTAR"));
+
+ 
+        System.out.println(strsample + " starts with 'Ro': " + strsample.startsWith("Ro"));
+        System.out.println(strsample + " ends with 'star': " + strsample.endsWith("star"));
+        System.out.println(strsample + " contains 'tar': " + strsample.contains("tar"));
+        System.out.println("Index of 't' in " + strsample + ": " + strsample.indexOf("t"));
+        System.out.println("Index of 'star' in " + strsample + ": " + strsample.indexOf("star"));
+
+ 
+        System.out.println("All caps: " + strsample.toUpperCase());
+        System.out.println("All small: " + strsample.toLowerCase());
+
+ 
+        System.out.println("Replace 'star' with 'et': " + strsample.replace("star", "et"));
+
+ 
+        System.out.print("Enter a decimal number (e.g., 3.456): ");
+        String dval = scanner.nextLine();
+        System.out.print("Enter an integer (e.g., 6): ");
+        String ival = scanner.nextLine();
+
+        double a = Double.valueOf(dval);
+        int b = Integer.valueOf(ival);
+        System.out.println("Double value: " + a);
+        System.out.println("Integer value: " + b);
+        System.out.println("Sum: " + (a + b));
+
+        scanner.close();
+    }
 }
