@@ -1,50 +1,79 @@
-package MODULE2;
-
+package javaaa;
 import java.util.Scanner;
-
-public class EmpArrObjects {
-
-	
-	public static void main(String[] args) {
-		
-		System.out.println("Enter number of employees");
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		System.out.println("Enter employee details: ");
-		Employee employees[] = new Employee[n];
-		Scanner scemp = new Scanner(System.in);
-		int eid,esal;
-		String  ename;
-		for(int i = 0; i  < n; i++) {
-			System.out.println("\nEnter details of employee "+(i+1));
-			System.out.println("Employee id(integer): ");
-			eid = scemp.nextInt();
-			scemp.nextLine();
-			System.out.println("Employee name: ");
-			ename = scemp.nextLine();
-			System.out.println("Salary: ");
-			esal = scemp.nextInt();
-			Employee emp = new Employee(eid, esal, ename);
-			employees[i] = emp;
+public class EmpArrObjects{
+	public static void main (String [] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the no of employee to enter:");
+		int n=sc.nextInt();
+		Employee [] Employees=new Employee[n];
+		for(int i=0;i<n;i++) {
+			System.out.println("enter the EmpId of "+(i+1));
+			System.out.println("EmpId");
+			int eid=sc.nextInt();
+			sc.nextLine();
+			System.out.println("enter the name of employee:");
+			String ename=sc.nextLine();
+			System.out.println("enter the salary of employee:");
+			int esal=sc.nextInt();
+			Employees[i]=new Employee(eid,esal,ename);
+			
 		}
-		System.out.println("Employees are:\n");
-		for(Employee y: employees)
-			y.showData();
-		System.out.println("Enter employee number to search");
-		int search = sc.nextInt();
-		boolean found = false;
-		for(Employee x: employees) {
-			if(search == x.eNo) {
-				found = true;
-				System.out.println("Employee found");
-				x.showData();
+		System.out.println("employee list");
+		for(Employee emp:Employees)
+			emp.showData();
+		System.out.println("enter the eno to search:");
+		int search=sc.nextInt();
+		boolean found=false;
+		for(Employee emp:Employees) {
+			if(emp.eNo== search) {
+				System.out.println("found");
+				emp.showData();
+				found=true;
 				break;
 			}
 		}
 		if(!found)
-			System.out.println("Employee not found");
+			System.out.println("not found");
 		sc.close();
-		scemp.close();
+		
 	}
-
-}
+	package javaaa;
+import java.util.Scanner;
+public class EmpArrObjects{
+	public static void main (String [] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the no of employee to enter:");
+		int n=sc.nextInt();
+		Employee [] Employees=new Employee[n];
+		for(int i=0;i<n;i++) {
+			System.out.println("enter the EmpId of "+(i+1));
+			System.out.println("EmpId");
+			int eid=sc.nextInt();
+			sc.nextLine();
+			System.out.println("enter the name of employee:");
+			String ename=sc.nextLine();
+			System.out.println("enter the salary of employee:");
+			int esal=sc.nextInt();
+			Employees[i]=new Employee(eid,esal,ename);
+			
+		}
+		System.out.println("employee list");
+		for(Employee emp:Employees)
+			emp.showData();
+		System.out.println("enter the eno to search:");
+		int search=sc.nextInt();
+		boolean found=false;
+		for(Employee emp:Employees) {
+			if(emp.eNo== search) {
+				System.out.println("found");
+				emp.showData();
+				found=true;
+				break;
+			}
+		}
+		if(!found)
+			System.out.println("not found");
+		sc.close();
+		
+	}
+	
