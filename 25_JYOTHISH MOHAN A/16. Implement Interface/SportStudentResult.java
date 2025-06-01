@@ -1,34 +1,45 @@
-package MODULE_3;
-interface Student
-{
-	int score = 0;
-	void displayScore();
+package module1;
+import java.util.Scanner;
+
+interface Student {
+    void sinput();
+    void sdisplay();
 }
 
-interface Sports
-{
-	int score = 25;
-	void displaySportsScore();
+interface Sports {
+    void kinput();
+    void kdisplay();
 }
 
-class Result implements Student,Sports
-{
-	public void displayScore()
-	{
-		System.out.println("Academic score is:"+Student.score);
-	}
-	public void displaySportsScore()
-	{
-		System.out.println("Sports Score is:"+Sports.score);
-	}
+class Result implements Student, Sports {
+    float sscore, kscore;
+    Scanner sc = new Scanner(System.in);
+
+    public void sinput() {
+        System.out.print("Enter academic score: ");
+        sscore = sc.nextFloat();
+    }
+
+    public void sdisplay() {
+        System.out.println("Academic score = " + sscore);
+    }
+
+    public void kinput() {
+        System.out.print("Enter sports score: ");
+        kscore = sc.nextFloat();
+    }
+
+    public void kdisplay() {
+        System.out.println("Sports score = " + kscore);
+    }
 }
 
-public class SportStudentResult {
-
-	public static void main(String[] args) {
-		
-		Result r = new Result();
-		r.displayScore();
-		r.displaySportsScore();
-	}
+public class SportsStudentResult {
+    public static void main(String[] args) {
+        Result r = new Result();
+        r.sinput(); 
+        r.sdisplay();
+        r.kinput();
+        r.kdisplay();
+    }
 }
